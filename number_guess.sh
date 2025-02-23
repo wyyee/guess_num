@@ -28,3 +28,13 @@ if [[ -z $USERNAME_RESULT ]]
 
     echo Welcome back, $USERNAME\! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses.
 fi
+
+# generate random number between 1 and 1000
+SECRET_NUMBER=$(( RANDOM % 1000 + 1 ))
+
+# variable to store number of guesses/tries
+GUESS_COUNT=0
+
+# prompt first guess
+echo "Guess the secret number between 1 and 1000:"
+read USER_GUESS
